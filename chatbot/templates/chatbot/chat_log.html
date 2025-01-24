@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>This chat log</h1>
+    <ul>
+        {% for chat in chats %}
+        <h3>사용자: {{ chat.user_message }}</h3>
+        <p>쳇봇: {{ chat.ai_message }}</p>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'chatbot:chatbot' %}">다시 질문하기</a>
+{% endblock content %}
