@@ -9,7 +9,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-def custom_chatbot(user_message):
+def custom_chatbot():
     prompt = "You're someone who shares kind and comforting words with people feeling tired or stressed."
 
     messages = [{"role": "system", "content": prompt}]
@@ -44,3 +44,6 @@ def custom_chatbot(user_message):
             log_file.write("-----" * 20 + "\n")
 
         print(f"system: {ai_response}")
+
+
+custom_chatbot()
